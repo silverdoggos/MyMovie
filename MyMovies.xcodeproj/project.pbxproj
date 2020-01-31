@@ -20,6 +20,8 @@
 		86BBB36823E3433000243DB9 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBB36723E3433000243DB9 /* MoviesTableViewController.swift */; };
 		86BBB36A23E4024D00243DB9 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBB36923E4024D00243DB9 /* SignViewController.swift */; };
 		86BBB36C23E4192500243DB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86BBB36B23E4192500243DB9 /* GoogleService-Info.plist */; };
+		86BBB37023E484AE00243DB9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBB36F23E484AE00243DB9 /* Movie.swift */; };
+		86BBB37223E48C7C00243DB9 /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBB37123E48C7C00243DB9 /* MovieViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		86BBB36723E3433000243DB9 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		86BBB36923E4024D00243DB9 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		86BBB36B23E4192500243DB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		86BBB36F23E484AE00243DB9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		86BBB37123E48C7C00243DB9 /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,8 @@
 				86BBB34B23E32D4700243DB9 /* AppDelegate.swift */,
 				86BBB34D23E32D4700243DB9 /* SceneDelegate.swift */,
 				86BBB36223E342C800243DB9 /* Controllers */,
-				86BBB35123E32D4700243DB9 /* Main.storyboard */,
+				86BBB36E23E4848D00243DB9 /* Model */,
+				86BBB36D23E4846800243DB9 /* Views */,
 				86BBB35723E32D4A00243DB9 /* Assets.xcassets */,
 				86BBB35923E32D4A00243DB9 /* LaunchScreen.storyboard */,
 				86BBB35C23E32D4A00243DB9 /* Info.plist */,
@@ -115,6 +120,24 @@
 				86BBB36723E3433000243DB9 /* MoviesTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		86BBB36D23E4846800243DB9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86BBB35123E32D4700243DB9 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		86BBB36E23E4848D00243DB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				86BBB36F23E484AE00243DB9 /* Movie.swift */,
+				86BBB37123E48C7C00243DB9 /* MovieViewCell.swift */,
+			);
+			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,10 +276,12 @@
 			files = (
 				86BBB36823E3433000243DB9 /* MoviesTableViewController.swift in Sources */,
 				86BBB35023E32D4700243DB9 /* StartViewController.swift in Sources */,
+				86BBB37023E484AE00243DB9 /* Movie.swift in Sources */,
 				86BBB36423E3430200243DB9 /* LogViewController.swift in Sources */,
 				86BBB36A23E4024D00243DB9 /* SignViewController.swift in Sources */,
 				86BBB34C23E32D4700243DB9 /* AppDelegate.swift in Sources */,
 				86BBB35623E32D4700243DB9 /* MyMovies.xcdatamodeld in Sources */,
+				86BBB37223E48C7C00243DB9 /* MovieViewCell.swift in Sources */,
 				86BBB36623E3431E00243DB9 /* InfoViewController.swift in Sources */,
 				86BBB34E23E32D4700243DB9 /* SceneDelegate.swift in Sources */,
 			);

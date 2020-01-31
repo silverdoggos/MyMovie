@@ -16,8 +16,11 @@ class StartViewController: UIViewController, GIDSignInDelegate {
     
 
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().delegate = self
