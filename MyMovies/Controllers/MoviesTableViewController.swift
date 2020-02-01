@@ -67,16 +67,19 @@ class MoviesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let destinationVC = segue.destination as! InfoViewController
         
         if let indexPath = tableView.indexPathForSelectedRow{
+            
             let mov = movies?.filter("category CONTAINS [cd] %@", sections[indexPath.section])[indexPath.row]
-            destinationVC.imageST = mov!.image
-            destinationVC.catST = mov!.category
-            destinationVC.textST = mov!.stars
+            destinationVC.movie = mov
         }
+        
+        
     }
     
+
     
     func loadDefaultMovies() {
         

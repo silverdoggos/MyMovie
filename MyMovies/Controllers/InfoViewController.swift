@@ -8,19 +8,18 @@
 
 import UIKit
 import FirebaseAuth
+import RealmSwift
 
 class InfoViewController: UIViewController {
     
-    var imageST: String?
-    var catST: String?
-    var textST: String?
+    var movie: Movie?
     
     @IBOutlet weak var imageMov: UIImageView!
     @IBOutlet weak var catelabel: UILabel!
     @IBOutlet weak var starLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let imagePath = imageST, let category = catST, let text = textST {
+        if let imagePath = movie?.image, let category = movie?.category, let text = movie?.stars {
             imageMov.image = UIImage(named: imagePath)
             catelabel.text = category
             starLabel.text = text
@@ -28,6 +27,7 @@ class InfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
     @IBAction func logOutPressed(_ sender: Any) {
         do {
             try Auth.auth().signOut()
@@ -37,3 +37,4 @@ class InfoViewController: UIViewController {
         }
     }
 }
+
