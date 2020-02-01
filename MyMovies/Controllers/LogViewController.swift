@@ -20,16 +20,17 @@ class LogViewController: UIViewController {
       
     }
     
+    // log in user
     @IBAction func buttonPressed(_ sender: Any) {
         if let email = emailtextField.text, let password = passwordTextfield.text {
-                  Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                      if let e = error {
-                          print(e.localizedDescription)
-                      } else {
-                          self.performSegue(withIdentifier: "loginToMovies", sender: self)
-                      }
-                  }
-              }
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e.localizedDescription)
+                } else {
+                    self.performSegue(withIdentifier: "loginToMovies", sender: self)
+                }
+            }
+        }
     }
-
+    
 }

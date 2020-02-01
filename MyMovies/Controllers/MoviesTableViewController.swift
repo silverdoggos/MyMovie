@@ -24,8 +24,6 @@ class MoviesTableViewController: UITableViewController {
 
         tableView.separatorStyle = .singleLine
         
-        
-        
         navigationItem.hidesBackButton = true
     }
 
@@ -61,6 +59,7 @@ class MoviesTableViewController: UITableViewController {
         return cell
     }
     
+    //MARK: - Select movie
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toInfo", sender: self)
@@ -78,6 +77,9 @@ class MoviesTableViewController: UITableViewController {
         
         
     }
+    
+
+    //MARK: - add movie data
     
 
     
@@ -160,7 +162,7 @@ class MoviesTableViewController: UITableViewController {
     
     
     
-    
+    //MARK: - Log out
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         do {
           try Auth.auth().signOut()

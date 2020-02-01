@@ -17,6 +17,7 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var imageMov: UIImageView!
     @IBOutlet weak var catelabel: UILabel!
     @IBOutlet weak var starLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let imagePath = movie?.image, let category = movie?.category, let text = movie?.stars {
@@ -24,10 +25,9 @@ class InfoViewController: UIViewController {
             catelabel.text = category
             starLabel.text = text
         }
-        // Do any additional setup after loading the view.
     }
 
-    
+    //log out
     @IBAction func logOutPressed(_ sender: Any) {
         do {
             try Auth.auth().signOut()

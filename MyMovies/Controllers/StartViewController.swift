@@ -14,13 +14,9 @@ class StartViewController: UIViewController, GIDSignInDelegate {
 
     let user = Auth.auth().currentUser
     
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().delegate = self
@@ -31,6 +27,14 @@ class StartViewController: UIViewController, GIDSignInDelegate {
         
     }
     
+    @IBAction func pressedLog(_ sender: Any) {
+    }
+    @IBAction func pressedSign(_ sender: Any) {
+    }
+    
+    //MARK: - Autentifiction with Google
+    
+
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
         if let error = error {
@@ -56,11 +60,6 @@ class StartViewController: UIViewController, GIDSignInDelegate {
         GIDSignIn.sharedInstance().signIn()
         
     }
-    @IBAction func pressedLog(_ sender: Any) {
-        
-    }
-    
-    @IBAction func pressedSign(_ sender: Any) {
-    }
+
 }
 

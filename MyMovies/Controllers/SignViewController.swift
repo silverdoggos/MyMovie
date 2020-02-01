@@ -18,6 +18,7 @@ class SignViewController: UIViewController {
     @IBOutlet weak var confirmTextField: UITextField!
     
  
+    //sing up new user
 
     @IBAction func signPressed(_ sender: UIButton) {
         guard passworTextField.text == confirmTextField.text else {
